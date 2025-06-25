@@ -834,41 +834,121 @@ main {
  * skills 
  */
 
-.skills-title { margin-bottom: 20px; }
+ :root {
+  --primary-accent: #29e6ff;
+}
 
-.skills-list { padding: 20px; }
+.skills-bento {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  color: #ffffff;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 1rem;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.bento-card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(41, 230, 255, 0.3);
+}
+
+.bento-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--primary-accent);
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.bento-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.bento-card li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
 
 
-.skills-item:not(:last-child) { margin-bottom: 15px; }
 
-.skill .title-wrapper {
+/*-----------------------------------*\
+  #Soft skills start
+\*-----------------------------------*/
+
+/* Base soft skill card styles */
+.service-item {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
 }
 
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
+/* Hover effect */
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(41, 230, 255, 0.25);
+  background-color: #252525;
 }
 
-.skill-progress-bg {
-  background: var(--jet);
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
+/* Text styling */
+.service-item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
 }
 
-.skill-progress-fill {
-  background: var(--sky-blue-crayola);
-  height: 100%;
-  border-radius: inherit;
+/* Optional: Soft Skill Section Title */
+.service-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
 }
 
 
-
+/*-----------------------------------*\
+  #Soft skills start
+\*-----------------------------------*/
 
 
 /*-----------------------------------*\
